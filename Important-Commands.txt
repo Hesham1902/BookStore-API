@@ -1,0 +1,40 @@
+#1-->to add an property inside object which inside array like this
+
+[{name:"ss",body"ss"},{name"dd",}]
+------------------------this command will add a body propery at the second object above---------------------------------
+db.books.updateOne(
+  { _id: ObjectId("64f42a36a0d05e79d9bea866") },
+  {
+    $set: {
+      "reviews.1.body": "excellent"
+    }
+  }
+)
+--------------------------------------------------2------------------------------------------------------- will add array like above
+db.books.updateOne(
+  { _id: ObjectId("64f42a36a0d05e79d9bea866") },
+  {
+    $push: {
+      reviews: {
+        $each: [
+          { name: "mario", body: "good" },
+          { name: "jane", body: "excellent" }
+        ]
+      }
+    }
+  }
+)
+--------------------------------------------------3------------------------------------------------------- will add array with only one object
+db.books.updateOne(
+  { _id: ObjectId("64f42a36a0d05e79d9bea866") },
+  {
+    $push: {
+      reviews: {
+        name: "mario",
+        body: "good"
+      }
+    }
+  }
+)
+
+
