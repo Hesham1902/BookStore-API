@@ -44,11 +44,11 @@ Instructions on setting up the Bookstore API locally.
    nodemon app
 
 
-#Usage
+## Usage
 
 The API can be accessed at http://localhost:3000.
 
-#API Endpoints
+## API Endpoints
 
     GET /books: Get a paginated list of books.
     GET /books/:id: Get details of a specific book.
@@ -56,6 +56,6 @@ The API can be accessed at http://localhost:3000.
     PATCH /books/:id: Update details of a book.
     DELETE /books/:id: Delete a book.
 
-#Contributing
+## Contributing
 
 If you'd like to contribute, please fork the repository and create a new branch. Pull requests are welcome!
